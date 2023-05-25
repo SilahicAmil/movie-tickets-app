@@ -5,6 +5,7 @@ import { StatusBar } from "expo-status-bar";
 
 export default function App() {
   const [moviesData, setMoviesData] = useState([]);
+
   const url =
     "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
 
@@ -15,6 +16,7 @@ export default function App() {
       Authorization: process.env.TMDB_AUTH,
     },
   };
+  // put this into its own file
   useEffect(() => {
     const getData = async () => {
       const data = await fetch(url, options);

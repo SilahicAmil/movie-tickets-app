@@ -1,6 +1,10 @@
--- https://www.figma.com/community/file/1130751076587602192 for design and layout
+<!-- DONE -->
 
--- https://developer.themoviedb.org/reference/movie-now-playing-list api to fetch basic movie data
+<!-- -- https://developer.themoviedb.org/reference/movie-now-playing-list api to fetch basic movie data -->
+
+<!-- TODO -->
+
+-- https://www.figma.com/community/file/1130751076587602192 for design and layout
 
 -- Should be a fun thing to build
 
