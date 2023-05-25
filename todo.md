@@ -8,6 +8,6 @@
 
 -- Should be a fun thing to build
 
--- Also build an online dashboard to see average sales and number of tickets sold on avg and etc
+-- Also build an online dashboard to see average sales and number of tickets sold on avg and etc - use Laravel for this maybe? with a SQL DB?
 
 -- https://image.tmdb.org/t/p/original - is the image path for the posters
