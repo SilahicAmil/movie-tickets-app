@@ -16,6 +16,7 @@ export default function App() {
       Authorization: process.env.TMDB_AUTH,
     },
   };
+
   // put this into its own file
   useEffect(() => {
     const getData = async () => {
