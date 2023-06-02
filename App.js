@@ -13,7 +13,7 @@ export default function App() {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization: process.env.TMDB_AUTH,
+      Authorization: process.env.TMDB_API,
     },
   };
 
@@ -23,7 +23,7 @@ export default function App() {
       const data = await fetch(url, options);
 
       const fullData = await data.json();
-
+      console.log(fullData);
       setMoviesData(fullData.results);
     };
     getData();
@@ -34,9 +34,9 @@ export default function App() {
       <StatusBar style="auto" />
       <Text>Hello World</Text>
 
-      {moviesData.map((data) => {
+      {/* {moviesData.map((data) => {
         return <Text key={data.id}>{data.original_title}</Text>;
-      })}
+      })} */}
     </View>
   );
 }
