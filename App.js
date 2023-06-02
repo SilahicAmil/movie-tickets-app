@@ -13,7 +13,7 @@ export default function App() {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization: process.env.TMDB_API,
+      Authorization: process.env.TMDB_AUTH,
     },
   };
 
