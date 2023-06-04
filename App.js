@@ -1,42 +1,19 @@
 import { StyleSheet, Text, View } from "react-native";
-import { useEffect, useState } from "react";
 
 import { StatusBar } from "expo-status-bar";
+import useFetchData from "./hooks/useFetchData";
 
 export default function App() {
-  const [moviesData, setMoviesData] = useState([]);
-
-  const url =
-    "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
-
-  const options = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization: process.env.TMDB_AUTH,
-    },
-  };
-
-  // put this into its own file
-  useEffect(() => {
-    const getData = async () => {
-      const data = await fetch(url, options);
-
-      const fullData = await data.json();
-      console.log(fullData);
-      setMoviesData(fullData.results);
-    };
-    getData();
-  }, []);
+  const { moviesData } = useFetchData();
 
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <Text>Hello World</Text>
 
-      {/* {moviesData.map((data) => {
+      {moviesData.map((data) => {
         return <Text key={data.id}>{data.original_title}</Text>;
-      })} */}
+      })}
     </View>
   );
 }
