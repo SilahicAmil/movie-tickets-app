@@ -9,7 +9,6 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <Text>Hello World</Text>
 
       {moviesData.map((data) => {
         return <Text key={data.id}>{data.original_title}</Text>;
