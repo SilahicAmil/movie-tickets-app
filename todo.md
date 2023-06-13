@@ -19,3 +19,5 @@
 -- add jest for testing
 
 -- add react native toasts
+
+-- create FlatList component for front page (2 cols, poster image and movie name below)

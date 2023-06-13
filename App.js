@@ -11,6 +11,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
+      {/* Flat List with 2 columns */}
 
       {moviesData.map((data) => {
         return (
