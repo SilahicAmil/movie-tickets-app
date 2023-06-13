@@ -13,6 +13,9 @@
 -- add react native navigation
 
 -- add vector icons
+
 -- add rneui for styling
+
 -- add jest for testing
+
 -- add react native toasts
