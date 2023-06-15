@@ -10,4 +10,8 @@ const MoviesList = () => {
   );
 };
 
+const styles = StyleSheet.create({
+  container: {},
+});
+
 export default MoviesList;
