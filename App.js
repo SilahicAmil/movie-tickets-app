@@ -16,23 +16,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <ScrollView>
-        {/* use FlatList here instead of map  */}
-        {moviesData.map((data) => {
-          return (
-            <>
-              <Text key={data.id}>{data.original_title}</Text>
-
-              <Image
-                style={styles.image}
-                source={{
-                  uri: `https://image.tmdb.org/t/p/original${data.poster_path}`,
-                }}
-              />
-            </>
-          );
-        })}
-      </ScrollView>
+      {/*  FlatList here   */}
     </View>
   );
 }
