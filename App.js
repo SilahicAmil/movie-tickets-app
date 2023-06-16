@@ -1,15 +1,23 @@
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
+import MoviesList from "./components/MoviesList/MoviesList";
 import { StatusBar } from "expo-status-bar";
 import useFetchData from "./hooks/useFetchData";
 
 export default function App() {
   const { moviesData } = useFetchData();
 
+  const renderMoviesListItems = (itemData) => {
+    // navigate on press
+    // pass props here
+    return <MoviesList />;
+  };
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <ScrollView>
+        {/* use FlatList here instead of map  */}
         {moviesData.map((data) => {
           return (
             <>

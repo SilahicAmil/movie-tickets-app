@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 
 const MoviesList = () => {
   return (
     <>
       <View>
-        <Text>Movies List FlatList goes here</Text>
+        <Image />
+        <Text>Movie Title</Text>
       </View>
     </>
   );
