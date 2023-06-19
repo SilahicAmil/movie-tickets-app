@@ -1,11 +1,12 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 
-const MoviesList = () => {
+const MoviesList = ({ imagePath, title }) => {
   return (
     <>
       <View>
+        {/* put imagePath in URI */}
         <Image />
-        <Text>Movie Title</Text>
+        <Text>{title}</Text>
       </View>
     </>
   );
