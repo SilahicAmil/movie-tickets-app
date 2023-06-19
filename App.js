@@ -9,7 +9,7 @@ export default function App() {
 
   const renderMoviesListItems = (itemData) => {
     // navigate on press
-    // pass props here
+
     return <MoviesList />;
   };
 
