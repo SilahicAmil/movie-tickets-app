@@ -1,4 +1,4 @@
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import MoviesList from "./components/MoviesList/MoviesList";
 import { StatusBar } from "expo-status-bar";
