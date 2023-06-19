@@ -10,7 +10,12 @@ export default function App() {
   const renderMoviesListItems = (itemData) => {
     // navigate on press
 
-    return <MoviesList />;
+    return (
+      <MoviesList
+        imagePath={itemData.item.imagePath}
+        title={itemData.item.original_title}
+      />
+    );
   };
 
   return (
