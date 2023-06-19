@@ -13,6 +13,7 @@ const MoviesList = ({ imagePath, title }) => {
 };
 
 const styles = StyleSheet.create({
+  // add styling
   container: {},
 });
 

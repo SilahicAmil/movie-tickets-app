@@ -28,9 +28,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  image: {
-    width: 200,
-    height: 200,
-    resizeMode: "contain",
-  },
 });
