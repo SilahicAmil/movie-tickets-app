@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     margin: 6,
     marginBottom: 12,
-    backgroundColor: "orange",
+    backgroundColor: "#1A2232",
     borderRadius: 8,
     overflow: "hidden",
   },
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 24,
     fontWeight: "bold",
-    color: "black",
+    color: "white",
   },
 });
 
