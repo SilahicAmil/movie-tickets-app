@@ -31,6 +31,11 @@ const styles = StyleSheet.create({
   card: {
     height: 420,
     borderWidth: 0,
+    margin: 6,
+    marginBottom: 12,
+    backgroundColor: "orange",
+    borderRadius: 8,
+    overflow: "hidden",
   },
   image: {
     width: "100%",
@@ -40,6 +45,8 @@ const styles = StyleSheet.create({
   text: {
     textAlign: "center",
     fontSize: 24,
+    fontWeight: "bold",
+    color: "black",
   },
 });
 
