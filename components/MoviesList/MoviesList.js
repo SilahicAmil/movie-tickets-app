@@ -1,4 +1,4 @@
-import { Image, SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, SafeAreaView, StyleSheet } from "react-native";
 
 import { Card } from "@rneui/themed";
 
@@ -8,20 +8,23 @@ const MoviesList = ({ imagePath, title }) => {
     <>
       {/* add onPress */}
       <SafeAreaView style={styles.container}>
-        <Card containerStyle={styles.card}>
-          <Image
-            source={{ uri: `https://image.tmdb.org/t/p/original${imagePath}` }}
-            style={styles.image}
-          />
-          <Card.Title style={styles.text}>{title}</Card.Title>
-        </Card>
+        <Pressable>
+          <Card containerStyle={styles.card}>
+            <Image
+              source={{
+                uri: `https://image.tmdb.org/t/p/original${imagePath}`,
+              }}
+              style={styles.image}
+            />
+            <Card.Title style={styles.text}>{title}</Card.Title>
+          </Card>
+        </Pressable>
       </SafeAreaView>
     </>
   );
 };
 
 const styles = StyleSheet.create({
-  // add styling
   container: {
     flex: 1,
   },
