@@ -1,4 +1,4 @@
-import { FlatList, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 
 import MoviesList from "./components/MoviesList/MoviesList";
 import { StatusBar } from "expo-status-bar";
@@ -19,7 +19,7 @@ export default function App() {
   };
 
   return (
-    <View>
+    <View style={styles.container}>
       <StatusBar style="auto" />
       <FlatList
         data={moviesData}
@@ -30,3 +30,9 @@ export default function App() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "white",
+  },
+});
