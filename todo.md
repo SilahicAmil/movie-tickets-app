@@ -14,6 +14,12 @@
 
 -- add react native navigation
 
+-- add movies details screen
+
+-- add seat selector screen
+
+-- add checkout screen
+
 -- add jest for testing
 
 -- add react native toasts
