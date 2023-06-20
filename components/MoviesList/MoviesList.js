@@ -2,12 +2,12 @@ import { Pressable, SafeAreaView, StyleSheet } from "react-native";
 
 import { Card } from "@rneui/themed";
 
-const MoviesList = ({ imagePath, title }) => {
+const MoviesList = ({ imagePath, title, onPress }) => {
   return (
     <>
       <SafeAreaView style={styles.container}>
         {/* add onPress */}
-        <Pressable>
+        <Pressable onPress={onPress}>
           <Card containerStyle={styles.card}>
             <Card.Image
               source={{

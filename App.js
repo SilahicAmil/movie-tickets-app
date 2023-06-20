@@ -1,38 +1,19 @@
-import { FlatList, StyleSheet, View } from "react-native";
-
-import MoviesList from "./components/MoviesList/MoviesList";
-import { StatusBar } from "expo-status-bar";
-import useFetchData from "./hooks/useFetchData";
+import HomeScreen from "./screens/HomeScreen";
+import MoviesDetailsScreen from "./screens/MoviesDetailsScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const { moviesData } = useFetchData();
-
-  const renderMoviesListItems = (itemData) => {
-    // navigate on press
-
-    return (
-      <MoviesList
-        imagePath={itemData.item.poster_path}
-        title={itemData.item.original_title}
-      />
-    );
-  };
-
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-      <FlatList
-        data={moviesData}
-        renderItem={renderMoviesListItems}
-        keyExtractor={(item) => item.id}
-        numColumns={2}
-      />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen
+          name="MoviesDetailsScreen"
+          component={MoviesDetailsScreen}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "white",
-  },
-});
