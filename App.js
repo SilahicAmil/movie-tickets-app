@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, View } from "react-native";
+import { FlatList, View } from "react-native";
 
 import MoviesList from "./components/MoviesList/MoviesList";
 import { StatusBar } from "expo-status-bar";
@@ -6,7 +6,6 @@ import useFetchData from "./hooks/useFetchData";
 
 export default function App() {
   const { moviesData } = useFetchData();
-  console.log(moviesData[0]);
 
   const renderMoviesListItems = (itemData) => {
     // navigate on press
