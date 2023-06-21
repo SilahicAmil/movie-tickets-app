@@ -16,7 +16,7 @@ const MoviesDetailsScreen = ({ route }) => {
           style={styles.image}
         />
       </Card>
-      <Text>{overview}</Text>
+      <Text style={styles.text}>{overview}</Text>
     </View>
   );
 };
@@ -34,10 +34,21 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
     width: "100%",
     margin: 0,
+    padding: 10,
   },
   image: {
     height: 300,
+
     width: "100%",
     resizeMode: "stretch",
+  },
+  text: {
+    fontSize: 16,
+    fontWeight: "normal",
+    letterSpacing: 0.7,
+    height: "50%",
+    backgroundColor: "red",
+    margin: 10,
+    padding: 15,
   },
 });
