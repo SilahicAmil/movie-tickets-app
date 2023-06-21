@@ -1,4 +1,3 @@
-import HomeScreen from "./screens/HomeScreen";
 import MoviesDetailsScreen from "./screens/MoviesDetailsScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import TabNavigation from "./navigation/TabNavigation";

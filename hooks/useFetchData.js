@@ -5,7 +5,9 @@ import { TMDB_AUTH } from "@env";
 const useFetchData = () => {
   const [moviesData, setMoviesData] = useState([]);
   //   add loading state
+  const [isLoading, setIsLoading] = useState(undefined);
   //   add error state
+  const [isError, setIsError] = useState(false);
 
   const url =
     "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
@@ -20,15 +22,22 @@ const useFetchData = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const data = await fetch(url, options);
+      try {
+        setIsLoading(true);
+        const data = await fetch(url, options);
 
-      const fullData = await data.json();
+        const fullData = await data.json();
 
-      setMoviesData(fullData.results);
+        setMoviesData(fullData.results);
+        setIsLoading(false);
+      } catch (err) {
+        console.log(err);
+        setIsError(true);
+      }
     };
     getData();
   }, []);
-  return { moviesData };
+  return { moviesData, isLoading };
 };
 
 export default useFetchData;

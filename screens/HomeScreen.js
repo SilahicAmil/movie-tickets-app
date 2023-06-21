@@ -1,11 +1,19 @@
-import { FlatList, StyleSheet, View } from "react-native/";
+import { FlatList, StyleSheet, Text, View } from "react-native/";
 
 import MoviesList from "../components/MoviesList/MoviesList";
 import { StatusBar } from "expo-status-bar";
 import useFetchData from "../hooks/useFetchData";
 
 const HomeScreen = ({ navigation }) => {
-  const { moviesData } = useFetchData();
+  const { moviesData, isLoading, isError } = useFetchData();
+
+  if (isError === true) {
+    return <Text>An Error has Occurred</Text>;
+  }
+
+  if (isLoading === true) {
+    return <Text>Loading</Text>;
+  }
 
   const renderMoviesListItems = (itemData) => {
     // navigate on press
@@ -36,9 +44,6 @@ const HomeScreen = ({ navigation }) => {
     </View>
   );
 };
-
-// once react nav is added
-// move everything from app.js to here
 
 export default HomeScreen;
 
