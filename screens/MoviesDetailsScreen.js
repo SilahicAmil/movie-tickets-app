@@ -6,7 +6,7 @@ const MoviesDetailsScreen = ({ route, navigation }) => {
   const { original_title, vote_average, release_date, overview, poster_path } =
     route.params;
 
-  // set nev option title to original_title
+  // set nav option title to original_title
   return (
     <View style={styles.container}>
       {/* create this into its own component  */}
