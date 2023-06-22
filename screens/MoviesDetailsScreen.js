@@ -2,12 +2,14 @@ import { StyleSheet, Text, View } from "react-native";
 
 import { Card } from "@rneui/themed";
 
-const MoviesDetailsScreen = ({ route }) => {
+const MoviesDetailsScreen = ({ route, navigation }) => {
   const { original_title, vote_average, release_date, overview, poster_path } =
     route.params;
 
+  // set nev option title to original_title
   return (
     <View style={styles.container}>
+      {/* create this into its own component  */}
       <Card containerStyle={styles.card}>
         <Card.Image
           source={{
