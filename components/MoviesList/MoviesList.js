@@ -6,7 +6,6 @@ const MoviesList = ({ imagePath, title, onPress }) => {
   return (
     <>
       <SafeAreaView style={styles.container}>
-        {/* add onPress */}
         <Pressable onPress={onPress}>
           <Card containerStyle={styles.card}>
             <Card.Image
