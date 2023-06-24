@@ -4,7 +4,10 @@ const MoviesDetailsScreen = ({ route, navigation }) => {
   const { original_title, vote_average, release_date, overview, poster_path } =
     route.params;
 
-  // set nav option title to original_title
+  navigation.setOptions({
+    headerTitle: original_title,
+  });
+
   return (
     <MovieDetails
       title={original_title}
