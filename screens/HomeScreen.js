@@ -1,5 +1,7 @@
-import { FlatList, StyleSheet, Text, View } from "react-native/";
+import { FlatList, StyleSheet, View } from "react-native/";
 
+import Error from "../components/UI/Error";
+import Loading from "../components/UI/Loading";
 import MoviesList from "../components/MoviesList/MoviesList";
 import { StatusBar } from "expo-status-bar";
 import useFetchData from "../hooks/useFetchData";
@@ -8,11 +10,11 @@ const HomeScreen = ({ navigation }) => {
   const { moviesData, isLoading, isError } = useFetchData();
 
   if (isError === true) {
-    return <Text>An Error has Occurred</Text>;
+    return <Error />;
   }
 
   if (isLoading === true) {
-    return <Text>Loading</Text>;
+    return <Loading />;
   }
 
   const renderMoviesListItems = (itemData) => {
