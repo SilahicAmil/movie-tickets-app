@@ -37,17 +37,18 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "white",
     height: "100%",
-    marginBottom: 25,
   },
   card: {
     width: "100%",
     margin: 0,
     padding: 10,
+    borderWidth: 0,
   },
   image: {
     height: 300,
     width: "100%",
     resizeMode: "stretch",
+    borderRadius: 8,
   },
   text: {
     fontSize: 20,
