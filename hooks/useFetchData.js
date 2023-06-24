@@ -4,9 +4,9 @@ import { TMDB_AUTH } from "@env";
 
 const useFetchData = () => {
   const [moviesData, setMoviesData] = useState([]);
-  //   add loading state
+
   const [isLoading, setIsLoading] = useState(undefined);
-  //   add error state
+
   const [isError, setIsError] = useState(false);
 
   const url =
@@ -37,7 +37,7 @@ const useFetchData = () => {
     };
     getData();
   }, []);
-  return { moviesData, isLoading };
+  return { moviesData, isLoading, isError };
 };
 
 export default useFetchData;
