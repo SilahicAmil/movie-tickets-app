@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 import { Card } from "@rneui/themed";
 
@@ -13,11 +13,16 @@ const MovieDetails = ({ title, description, rating, release, poster_path }) => {
           style={styles.image}
         />
       </Card>
+
       <View>
-        <Text>{title}</Text>
-        <Text>{rating}</Text>
-        <Text>{release}</Text>
+        <Text style={styles.title}>{title}</Text>
       </View>
+
+      <View style={styles.detailsContainer}>
+        <Text>{rating} Stars</Text>
+        <Text style={styles.realease}>{release}</Text>
+      </View>
+
       <Text style={styles.text}>{description}</Text>
     </View>
   );
@@ -47,9 +52,25 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "normal",
     letterSpacing: 0.7,
-    height: "50%",
+    height: "40%",
     backgroundColor: "red",
     margin: 10,
     padding: 15,
+  },
+  detailsContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 15,
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: "bold",
+    textAlign: "center",
+    letterSpacing: 1.5,
+    padding: 15,
+  },
+  realease: {
+    fontSize: 14,
   },
 });
