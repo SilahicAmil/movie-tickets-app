@@ -1,3 +1,4 @@
+import AccountScreen from "../screens/AccountScreen";
 import HomeScreen from "../screens/HomeScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
@@ -21,8 +22,8 @@ const TabNavigation = () => {
         }}
       />
       <Tab.Screen
-        name="Cart2"
-        component={HomeScreen}
+        name="Account"
+        component={AccountScreen}
         options={{
           headerShown: false,
         }}
