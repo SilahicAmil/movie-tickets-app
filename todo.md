@@ -16,7 +16,9 @@
 
 -- add seat selector screen
 
--- add checkout screen
+-- add account screen
+
+-- add tickets screen
 
 -- add jest for testing
 
