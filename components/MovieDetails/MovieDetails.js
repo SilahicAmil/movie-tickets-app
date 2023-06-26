@@ -25,7 +25,7 @@ const MovieDetails = ({ title, description, rating, release, poster_path }) => {
           {/* maybe add calendar vector icon */}
           <Text style={styles.realease}>{release}</Text>
         </View>
-
+        {/* make this better */}
         <Text style={styles.text}>{description}</Text>
       </ScrollView>
     </View>
