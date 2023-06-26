@@ -14,6 +14,7 @@ const MoviesList = ({ imagePath, title, onPress }) => {
               }}
               style={styles.image}
             />
+            {/* add star rating in top right */}
             <Card.Title style={styles.text}>{title}</Card.Title>
           </Card>
         </Pressable>

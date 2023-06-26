@@ -4,6 +4,7 @@ const AccountScreen = ({}) => {
   return (
     <View>
       <Text>Account Screen</Text>
+      {/* freestyle this screen */}
     </View>
   );
 };

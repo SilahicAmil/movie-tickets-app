@@ -20,7 +20,9 @@ const MovieDetails = ({ title, description, rating, release, poster_path }) => {
 
       <ScrollView>
         <View style={styles.detailsContainer}>
+          {/* add stars vector icon */}
           <Text>{rating} Stars</Text>
+          {/* maybe add calendar vector icon */}
           <Text style={styles.realease}>{release}</Text>
         </View>
 

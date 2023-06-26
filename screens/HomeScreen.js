@@ -18,7 +18,6 @@ const HomeScreen = ({ navigation }) => {
   }
 
   const renderMoviesListItems = (itemData) => {
-    // navigate on press
     const moviePressedHandler = () => {
       navigation.navigate("MoviesDetailsScreen", {
         ...itemData.item,
