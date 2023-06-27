@@ -14,6 +14,14 @@ export default function App() {
           component={TabNavigation}
           options={{
             title: "Omniplex",
+            headerTintColor: "white",
+            headerTitleStyle: {
+              fontSize: 24,
+              fontWeight: "bold",
+            },
+            headerStyle: {
+              backgroundColor: "#1A2232",
+            },
           }}
         />
         <Stack.Screen

@@ -26,6 +26,7 @@ const MoviesList = ({ imagePath, title, onPress }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 18,
   },
   card: {
     height: 425,
