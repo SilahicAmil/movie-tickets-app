@@ -32,6 +32,7 @@ const MovieDetails = ({ title, description, rating, release, poster_path }) => {
         <Text style={styles.text}>{description}</Text>
       </ScrollView>
       <View style={styles.buttonContainer}>
+        {/* should navigate to select seat screen full screen swtich not a modal type thing */}
         <Button size="lg" title="Reserve Ticket" />
       </View>
     </View>
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
     margin: 0,
     padding: 10,
     borderWidth: 0,
-    backgroundColor: "#1A2232",
+    backgroundColor: "black",
   },
   image: {
     height: 300,
@@ -65,8 +66,8 @@ const styles = StyleSheet.create({
     letterSpacing: 1.4,
     height: "100%",
     color: "white",
-    margin: 10,
-    padding: 15,
+    margin: 5,
+    padding: 5,
   },
   detailsContainer: {
     display: "flex",
