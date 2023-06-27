@@ -32,7 +32,7 @@ const MovieDetails = ({ title, description, rating, release, poster_path }) => {
         <Text style={styles.text}>{description}</Text>
       </ScrollView>
       <View style={styles.buttonContainer}>
-        <Button size="lg" title="Buy Ticket" />
+        <Button size="lg" title="Reserve Ticket" />
       </View>
     </View>
   );
