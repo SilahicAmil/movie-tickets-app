@@ -20,6 +20,10 @@
 
 -- add tickets screen
 
+-- fix styling across app
+
+-- make moviesList card better
+
 -- add jest for testing
 
 -- add react native toasts
