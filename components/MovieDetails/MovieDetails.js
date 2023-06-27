@@ -24,8 +24,8 @@ const MovieDetails = ({ title, description, rating, release, poster_path }) => {
         </View>
 
         <View style={styles.ratingContainer}>
-          <Icon name="calendar" type="font-awesome" color="white" />
           <Text style={styles.detailsText}>{release}</Text>
+          <Icon name="calendar" type="font-awesome" color="white" />
         </View>
       </View>
       <ScrollView>
