@@ -1,6 +1,5 @@
+import { Button, Card, Icon } from "@rneui/themed";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
-
-import { Card } from "@rneui/themed";
 
 const MovieDetails = ({ title, description, rating, release, poster_path }) => {
   return (
@@ -18,16 +17,23 @@ const MovieDetails = ({ title, description, rating, release, poster_path }) => {
         <Text style={styles.title}>{title}</Text>
       </View>
 
-      <ScrollView>
-        <View style={styles.detailsContainer}>
-          {/* add stars vector icon */}
-          <Text>{rating} Stars</Text>
-          {/* maybe add calendar vector icon */}
-          <Text style={styles.realease}>{release}</Text>
+      <View style={styles.detailsContainer}>
+        <View style={styles.ratingContainer}>
+          <Text style={styles.detailsText}>{rating}</Text>
+          <Icon name="star" color="#DBDC50" />
         </View>
-        {/* make this better */}
+
+        <View style={styles.ratingContainer}>
+          <Icon name="calendar" type="font-awesome" color="white" />
+          <Text style={styles.detailsText}>{release}</Text>
+        </View>
+      </View>
+      <ScrollView>
         <Text style={styles.text}>{description}</Text>
       </ScrollView>
+      <View style={styles.buttonContainer}>
+        <Button size="lg" title="Buy Ticket" />
+      </View>
     </View>
   );
 };
@@ -37,7 +43,7 @@ export default MovieDetails;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#1A2232",
     height: "100%",
   },
   card: {
@@ -45,6 +51,7 @@ const styles = StyleSheet.create({
     margin: 0,
     padding: 10,
     borderWidth: 0,
+    backgroundColor: "#1A2232",
   },
   image: {
     height: 300,
@@ -53,11 +60,11 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   text: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "normal",
     letterSpacing: 1.4,
-    height: "90%",
-    backgroundColor: "gray",
+    height: "100%",
+    color: "white",
     margin: 10,
     padding: 15,
   },
@@ -73,8 +80,20 @@ const styles = StyleSheet.create({
     textAlign: "center",
     letterSpacing: 1.5,
     padding: 15,
+    color: "white",
   },
-  realease: {
-    fontSize: 14,
+  detailsText: {
+    fontSize: 16,
+    color: "white",
+  },
+  ratingContainer: {
+    display: "flex",
+    flexDirection: "row",
+    gap: 8,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  buttonContainer: {
+    marginBottom: 32,
   },
 });
