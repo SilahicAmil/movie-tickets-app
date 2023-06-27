@@ -32,7 +32,7 @@ const MovieDetails = ({ title, description, rating, release, poster_path }) => {
         <Text style={styles.text}>{description}</Text>
       </ScrollView>
       <View style={styles.buttonContainer}>
-        {/* should navigate to select seat screen full screen swtich not a modal type thing */}
+        {/* should navigate to select seat screen full screen switch not a modal type thing */}
         <Button size="lg" title="Reserve Ticket" />
       </View>
     </View>

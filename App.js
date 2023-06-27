@@ -2,6 +2,7 @@ import MoviesDetailsScreen from "./screens/MoviesDetailsScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import TabNavigation from "./navigation/TabNavigation";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
