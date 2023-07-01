@@ -15,6 +15,7 @@ const TabNavigation = () => {
           headerShown: false,
         }}
       />
+
       <Tab.Screen
         name="Tickets"
         component={TicketsScreen}
@@ -22,6 +23,7 @@ const TabNavigation = () => {
           headerShown: false,
         }}
       />
+
       <Tab.Screen
         name="Account"
         component={AccountScreen}
